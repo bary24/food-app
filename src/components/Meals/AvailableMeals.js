@@ -29,8 +29,14 @@ const DUMMY_MEALS = [
 ];
 export default function AvailableMeals() {
     const mealsList = DUMMY_MEALS.map((meal) => (
-        <Card>
-            <MealItem key={meal.id} name={meal.name} desc={meal.description} price={meal.price} />
+        <Card key={Math.random()}>
+            <MealItem
+                key={meal.id}
+                id={meal.id}
+                name={meal.name}
+                desc={meal.description}
+                price={meal.price}
+            />
         </Card>
     ));
     return (
